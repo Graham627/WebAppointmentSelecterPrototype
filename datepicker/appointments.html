@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Schedule an Appointment</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1"/>
+   <link rel="stylesheet" 
+          href="main.css"/>
+    <link rel="stylesheet" 
+          href="appointments.css"/>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="./indexResources/sampleBusinessLogo.jpg">
+        <div id="nav">    
+            <ul id="nav-links">
+                <li id="one">placeholder</li>
+                <li id="two">placeholder</li>
+                <li id="three">placeholder</li>
+            </ul>
+        </div>
+    </div>
+    <section class="services">
+        <!--onload get req to server, server gets from fs, then res+handle data in html-->
+        <form id="picker" action="http://localhost:3000" method="post">
+            <label for="name">Enter Your Name:</label>
+            <input id="name" type="text" name="name"/>
+            <label id="date-label" for="date">Select Appointment Date and Time:</label>
+            <div id="datepicker-container">
+                <input type="text" id="date-input" name="date" placeholder="Select date" />
+          
+                <div id="datepicker"> <!--hidden-->
+                 
+                  <div id="datepicker-header">
+                    <button id="prev">Prev</button>
+          
+                    <div>
+                      <select id="month-input">
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                      </select>
+                      <input type="number" id="year-input" />
+                    </div>
+          
+                    <button id="next">Next</button>
+                  </div>
+             
+                  <div id="days">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                  </div>
+                 
+                  <div id="dates"></div>
+                  <!--check if restrictDates is supposed to have parenthesis-->
+                  <div id="datepicker-footer">
+                    <button id="cancel">Cancel</button>
+                    <button id="apply">Apply</button>
+                  </div>
+                </div>
+              </div>
+            <input id="submit" type="submit" value="submit"/>
+        </form>
+    </section>
+    <div id="footer">
+        <a href="placeholder">contact</a>
+        <a href="placeholder">about our team or something like that</a>
+        <a href="placeholder">location info maybe</a>
+    </div>
+</body>
+<script type = "text/javascript"
+          src = "appointments.js" ></script>
+</html>
