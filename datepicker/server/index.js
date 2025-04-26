@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const port = 3000
 const fs = require('fs');
-const cors = require('cors');
+//const cors = require('cors');
 
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(cors());
-
+//app.use(cors());
+//set cross origin permissions up!
 app.get('/', (req, res) => {
     fs.readFile('data.csv', 'utf8', (err,data) => {
         const lines = data.trim().split('\n');
